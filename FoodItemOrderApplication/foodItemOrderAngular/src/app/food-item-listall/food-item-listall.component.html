@@ -1,0 +1,30 @@
+<div class="panel panel-default" [hidden]="hideFoodListAllItem">
+  <div class="panel-heading">
+    <h1>Food Items</h1>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th>Food Item Id</th>
+          <th>Food Item Name</th>
+          <th>Food Item Cost</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let foodItem of foodItemList">
+          <td>{{foodItem.foodItemId}}</td>
+          <td>{{foodItem.foodItemName}}</td>
+          <td>{{foodItem.foodCost}}</td>
+          <td><span><button (click)="updateFoodItem(foodItem.foodItemId)">Update</button></span><span css=""><button (click)="deleteEmployee(foodItem.foodItemId)">Delete</button></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+<div [hidden]="hideFoodListUpdate">
+  <app-food-item-update [foodItemId]="foodItemId"></app-food-item-update>
+</div>
+

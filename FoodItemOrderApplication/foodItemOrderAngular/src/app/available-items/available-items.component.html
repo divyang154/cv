@@ -1,0 +1,29 @@
+<div>
+        <div style="margin-left: 10%;margin-bottom:1%" class="card mt-1">
+                <h6 class="card-header">Breakout of the order</h6>
+        </div>
+<form [formGroup]="availItemForm"  (ngSubmit)="payment()">
+<div class="panel-body container">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th>Food Item Name</th>
+              <th>Food Item Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let foodItem of foodItemList">
+              <td>{{foodItem.foodItemName}}</td>
+              <td>{{foodItem.foodCost}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="form-group container">
+            <label for="amount">Total amount to be paid</label>
+            <input type="text" [readonly]="true"  formControlName="amount" class="form-control" />
+    </div>
+    <div style="margin-left: 10%;margin-bottom:1%">
+            <button  type="submit" class="btn btn-success">Make Payment</button>
+          </div>
+</form>      

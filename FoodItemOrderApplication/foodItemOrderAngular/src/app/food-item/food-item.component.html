@@ -1,0 +1,21 @@
+<div>
+    <span>
+    <div style="margin-top: 1%;">
+          <button class="btn btn-primary active" role="button" (click)="showAllFoodItemsClick()">View All Food items</button>
+     </div>
+     <div style="margin-top: 1%;"> 
+          <button class="btn btn-primary active" role="button" (click)="addFoodItemClick()">Add Food item</button>
+ 
+    </div>
+</span>
+<span>
+<div style="margin-left: 4%;margin-top: 1%;" class="container">
+<div [hidden]="hideFoodItemAdd">
+<app-food-item-add></app-food-item-add>
+</div>
+<div [hidden]="hideFoodListAllItem">
+<app-food-item-listall></app-food-item-listall>
+</div>
+</div>
+</span>
+</div>

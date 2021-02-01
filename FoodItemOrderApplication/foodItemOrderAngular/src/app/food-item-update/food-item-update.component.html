@@ -1,0 +1,16 @@
+    <div  style="width: 400px;">
+        <h3>Edit Food Items</h3>
+        <form [formGroup]="foodItemEditForm" (ngSubmit)="submit()">
+        <div class="form-group">
+          <label for="name">Food Item Name</label>
+          <input type="text" class="form-control" id="foodItemName" required  formControlName="foodItemName">
+        </div>
+    
+        <div class="form-group">
+          <label for="name">Food Item Cost</label>
+          <input type="text" class="form-control" id="foodItemCost" required  formControlName="foodItemCost">
+        </div>
+    
+        <button type="submit" class="btn btn-success">Submit</button>
+      </form>
+    </div>
