@@ -1,3 +1,4 @@
+CREATE DATABASE foodorder;
 CREATE TABLE `user_tb` (
   `user_id` int(11) NOT NULL AUTO_INCREMENT,
   `created_by` int(11) DEFAULT NULL,
